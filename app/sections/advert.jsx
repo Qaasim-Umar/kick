@@ -1,0 +1,35 @@
+import React from 'react'
+
+const advert = () => {
+  return (
+    <div className='p-[50px] bg-[#EDEEF2] my-[170px]  relative '>
+
+
+    <div className="flex ">
+      <div className="w-1/2 flex items-center justify-center">
+        {/* Left half content  */}
+    <div className=' flex-row space-y-5'>
+    <h1 className='text-[48px] leading-[61px] font-semibold font-space-grotesk'>Take advantage of the ongoing ‘Buy one Get One free’</h1>
+    
+    <p className='text-[20px] leading-[36px]'>Don't miss out on our incredible 'Buy One, Get One Free' offer! Double your style and savings with this limited-time deal</p>
+    
+    <p className='bg-[#141311] text-white px-[16px] py-[24px] rounded-[12px] w-[190px] flex justify-center'> View all</p>
+    </div>
+      </div>
+      <div className="w-1/2 flex items-center justify-center">
+        {/* Right half content */}
+        <img src="/img/black.png" alt="shoe" className=' absolute' />
+    
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+        </div>
+  )
+}
+
+export default advert
