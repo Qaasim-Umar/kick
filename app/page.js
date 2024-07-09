@@ -18,12 +18,12 @@ export default function Home() {
      <Hero/>
      <Benefit/>
      <Collection/>
-     <Advert/>
-     <Products/>
-     <Deals/>
-     <Sneakers/>
-     <You/>
-     <Footer/>
+     {/* <Advert/> */}
+     {/* <Products/> */}
+     {/* <Deals/> */}
+     {/* <Sneakers/> */}
+     {/* <You/> */}
+     {/* <Footer/> */}
     </main>
   );
 }
