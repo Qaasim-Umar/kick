@@ -81,7 +81,7 @@ const products = () => {
                   </div>
 
                   <button>
-                    <Image src="Image/blackcart.svg" alt="" />
+                    <Image src="/img/blackcart.svg" width={100} height={100} alt="" />
                   </button>
 
 
