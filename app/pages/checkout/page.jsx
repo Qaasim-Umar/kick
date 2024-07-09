@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Footer from "@/app/sections/footer";
 
 
 export default function Checkout() {
@@ -13,7 +15,7 @@ export default function Checkout() {
               <div className="mb-4">
                 <div className="flex justify-between items-center mb-2  ">
                   <div className="flex items-center">
-                    <img src="/img/shoe.png" alt="Puma and Lamelo sneakers" className="w-12 h-12 mr-2 bg-[#EDEEF2]" />
+                    <Image src="/img/shoe.png" alt="Puma and Lamelo sneakers" width={100} height={100} className="w-12 h-12 mr-2 bg-[#EDEEF2]" />
                     <div>
                       <h3 className="font-semibold text-[#141311] font-space-grotesk text-[24px]">Puma and Lamelo sneakers</h3>
                       <p className="text-[#4F4F4F]">Size: 45, Colour: Pink</p>
@@ -28,13 +30,13 @@ export default function Checkout() {
                 </div>
                 <div className="flex justify-between items-center mb-2 ">
                   <div className="flex items-center">
-                    <img src="/img/shoe.png" alt="Nike Free Metcon" className="w-12 h-12 mr-2 bg-[#EDEEF2]" />
+                    <Image src="/img/shoe.png" alt="Nike Free Metcon" width={100} height={100} className="w-12 h-12 mr-2 bg-[#EDEEF2]" />
                     <div>
                       <h3 className="font-semibold text-[#141311] font-space-grotesk text-[24px]">Nike Free Metcon</h3>
                       <p className="text-[#4F4F4F]">Size: 40, Colour: Pink</p>
                     </div>
                   </div>
-             
+
                   <div className="flex flex-col items-end">
                     <p className="text-[#141311] text-[20px] font-medium">$120.00</p>
                     <p className="text-[#141311]">Quantity: 01</p>
@@ -43,7 +45,7 @@ export default function Checkout() {
                 </div>
                 <div className="flex justify-between items-center">
                   <div className="flex items-center">
-                    <img src="/img/shoe.png" alt="Air Jordan Retro" className="w-12 h-12 mr-2 bg-[#EDEEF2]" />
+                    <Image src="/img/shoe.png" alt="Air Jordan Retro" width={100} height={100} className="w-12 h-12 mr-2 bg-[#EDEEF2]" />
                     <div>
                       <h3 className="font-semibold text-[#141311] font-space-grotesk text-[24px]">Air Jordan Retro</h3>
                       <p className="text-[#4F4F4F]">Size: 45, Colour: Pink</p>
@@ -113,93 +115,94 @@ export default function Checkout() {
           </div>
           <div>
             <div className=" border border-[#919191] p-5 rounded-[12px]">
-            <h2 className="text-2xl font-semibold mb-4">Payment details</h2>
-            <form className="space-y-4">
-              <div>
-                <p className="block mb-2">Payment method</p>
-                <div className="flex flex-col space-y-2">
-                  <p className="flex items-center">
-                    <input type="radio" name="payment-method" className="mr-2" /> Paypal
-                  </p>
-                  <p className="flex items-center">
-                    <input type="radio" name="payment-method" className="mr-2" /> Google/Apple pay
-                  </p>
-                  <p className="flex items-center">
-                    <input type="radio" name="payment-method" className="mr-2" /> American express
-                  </p>
-                  <p className="flex items-center">
-                    <input type="radio" name="payment-method" className="mr-2" /> Venmo
-                  </p>
-                  <p className="flex items-center">
-                    <input type="radio" name="payment-method" className="mr-2" /> Discover
-                  </p>
-                  <p className="flex items-center">
-                    <input type="radio" name="payment-method" className="mr-2" /> Maestro
-                  </p>
-                  <p className="flex items-center">
-                    <input type="radio" name="payment-method" className="mr-2" /> After pay
-                  </p>
-                  <p className="flex items-center">
-                    <input type="radio" name="payment-method" className="mr-2" /> Debit or Credit card
-                  </p>
+              <h2 className="text-2xl font-semibold mb-4">Payment details</h2>
+              <form className="space-y-4">
+                <div>
+                  <p className="block mb-2">Payment method</p>
+                  <div className="flex flex-col space-y-2">
+                    <p className="flex items-center">
+                      <input type="radio" name="payment-method" className="mr-2" /> Paypal
+                    </p>
+                    <p className="flex items-center">
+                      <input type="radio" name="payment-method" className="mr-2" /> Google/Apple pay
+                    </p>
+                    <p className="flex items-center">
+                      <input type="radio" name="payment-method" className="mr-2" /> American express
+                    </p>
+                    <p className="flex items-center">
+                      <input type="radio" name="payment-method" className="mr-2" /> Venmo
+                    </p>
+                    <p className="flex items-center">
+                      <input type="radio" name="payment-method" className="mr-2" /> Discover
+                    </p>
+                    <p className="flex items-center">
+                      <input type="radio" name="payment-method" className="mr-2" /> Maestro
+                    </p>
+                    <p className="flex items-center">
+                      <input type="radio" name="payment-method" className="mr-2" /> After pay
+                    </p>
+                    <p className="flex items-center">
+                      <input type="radio" name="payment-method" className="mr-2" /> Debit or Credit card
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <p className="block mb-2">Email address*</p>
-                <input type="email" className="w-full p-2 border rounded" />
-              </div>
-              <div>
-                <p className="block mb-2">Card number*</p>
-                <input type="text" className="w-full p-2 border rounded" />
-              </div>
-              <div>
-                <p className="block mb-2">Card holder's number*</p>
-                <input type="text" className="w-full p-2 border rounded" />
-              </div>
-              <div className="flex space-x-4">
-                <div className="flex-1">
-                  <p className="block mb-2">Expiry date*</p>
+                <div>
+                  <p className="block mb-2">Email address*</p>
+                  <input type="email" className="w-full p-2 border rounded" />
+                </div>
+                <div>
+                  <p className="block mb-2">Card number*</p>
                   <input type="text" className="w-full p-2 border rounded" />
                 </div>
-                <div className="flex-1">
-                  <p className="block mb-2">CVS*</p>
+                <div>
+                  <p className="block mb-2">Card holder's number*</p>
                   <input type="text" className="w-full p-2 border rounded" />
                 </div>
-              </div>
-              
-            </form>
+                <div className="flex space-x-4">
+                  <div className="flex-1">
+                    <p className="block mb-2">Expiry date*</p>
+                    <input type="text" className="w-full p-2 border rounded" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="block mb-2">CVS*</p>
+                    <input type="text" className="w-full p-2 border rounded" />
+                  </div>
+                </div>
+
+              </form>
             </div>
 
             <div className=" border border-[#919191] p-5 rounded-[12px]">
-            <h2 className="text-2xl font-semibold mt-8 mb-4">Order summary</h2>
-            <div className="space-y-2">
-              <div className="flex justify-between">
-                <span>Sub Total</span>
-                <span>$855.00</span>
+              <h2 className="text-2xl font-semibold mt-8 mb-4">Order summary</h2>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span>Sub Total</span>
+                  <span>$855.00</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Tax(15%)</span>
+                  <span>$32.00</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Delivery fee</span>
+                  <span>$53.00</span>
+                </div>
+                <div className="flex justify-between font-semibold">
+                  <span>Total</span>
+                  <span>$940.00</span>
+                </div>
               </div>
-              <div className="flex justify-between">
-                <span>Tax(15%)</span>
-                <span>$32.00</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Delivery fee</span>
-                <span>$53.00</span>
-              </div>
-              <div className="flex justify-between font-semibold">
-                <span>Total</span>
-                <span>$940.00</span>
-              </div>
+              <input type="text" placeholder="Add coupon code here" className="w-full p-2 border rounded mt-4" />
+              <button className="mt-4 w-full p-2 bg-blue-500 text-white rounded">Apply</button>
+              <button className="mt-4 w-full p-2 bg-green-500 text-white rounded">Pay $800.00</button>
+              <p className="mt-4 text-sm text-center">
+                By proceeding, you are automatically accepting the <a href="#" className="text-blue-500">Terms & Conditions</a>
+              </p>
             </div>
-            <input type="text" placeholder="Add coupon code here" className="w-full p-2 border rounded mt-4" />
-            <button className="mt-4 w-full p-2 bg-blue-500 text-white rounded">Apply</button>
-            <button className="mt-4 w-full p-2 bg-green-500 text-white rounded">Pay $800.00</button>
-            <p className="mt-4 text-sm text-center">
-              By proceeding, you are automatically accepting the <a href="#" className="text-blue-500">Terms & Conditions</a>
-            </p>
           </div>
         </div>
-        </div>
       </div>
+      <Footer />
     </div>
   );
 }

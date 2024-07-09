@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 const OrderSummary = ({ total }) => {
-    return (
-        <div>
+  return (
+    <div>
 
 
 
@@ -11,7 +13,7 @@ const OrderSummary = ({ total }) => {
           <span className="font-semibold text-[36px]">${total.toFixed(2)}</span>
         </div>
         <button className="bg-[#141311] text-white w-full py-2 rounded font-medium text-[24px]">Checkout now</button>
-    
+
       </div>
 
 
@@ -19,17 +21,16 @@ const OrderSummary = ({ total }) => {
         <div className="mt-4">
           <h3 className="font-medium text-[36px]  my-5 font-space-grotesk">We accept</h3>
           <div className="flex flex-wrap space-x-2">
-            <img src="/img/master.png" alt="Visa" className="" />
-        
+            <Image src="/img/master.png" width={320} height={120}  alt="Visa" className="" />
+
             {/* Add more payment methods as needed */}
           </div>
         </div>
       </div>
 
 
-      </div>
-    );
-  };
-  
-  export default OrderSummary;
-  
+    </div>
+  );
+};
+
+export default OrderSummary;
