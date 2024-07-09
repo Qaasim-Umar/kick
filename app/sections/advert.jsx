@@ -12,7 +12,7 @@ const advert = () => {
           <div className=' flex-row space-y-5'>
             <h1 className='text-[48px] leading-[61px] font-semibold font-space-grotesk'>Take advantage of the ongoing &apos;Buy one Get One free&apos;</h1>
 
-            <p className='text-[20px] leading-[36px]'>Don't miss out on our incredible &apos;Buy One, Get One Free&apos; offer! Double your style and savings with this limited-time deal</p>
+            <p className='text-[20px] leading-[36px]'>Don&apos;t miss out on our incredible &apos;Buy One, Get One Free&apos; offer! Double your style and savings with this limited-time deal</p>
 
             <p className='bg-[#141311] text-white px-[16px] py-[24px] rounded-[12px] w-[190px] flex justify-center'> View all</p>
           </div>
