@@ -14,12 +14,12 @@ import Navbar from "./sections/navbar";
 export default function Home() {
   return (
     <main>
-    {/* <Navbar/> */}
+    <Navbar/>
      <Hero/>
      <Benefit/>
      <Collection/>
      {/* <Advert/> */}
-     <Products/>
+     {/* <Products/> */}
      {/* <Deals/> */}
      {/* <Sneakers/> */}
      {/* <You/> */}

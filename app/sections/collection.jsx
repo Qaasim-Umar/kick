@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const collection = () => {
   return (
@@ -47,10 +48,12 @@ const collection = () => {
                 </div>
                 <div className="bg-[#D6D7DB] p-4 flex flex-col items-center justify-center">
                   <Image src="/img/whiteandblack.png" width={100} height={100} alt="Product 4" className="object-cover w-[380px]" />
+<Link href="/pages/cartPage">
                   <button className="mt-auto bg-white text-black py-2 px-4 rounded-full flex items-center">
                     <Image src="/img/blackcart.svg" width={20} height={20} alt="" className='pr-1' />
                     Add to cart
                   </button>
+                  </Link>
                 </div>
 
               </div>
