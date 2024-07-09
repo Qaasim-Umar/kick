@@ -155,7 +155,7 @@ export default function Checkout() {
                   <input type="text" className="w-full p-2 border rounded" />
                 </div>
                 <div>
-                  <p className="block mb-2">Card holder's number*</p>
+                  <p className="block mb-2">Card holder&apos;s number*</p>
                   <input type="text" className="w-full p-2 border rounded" />
                 </div>
                 <div className="flex space-x-4">
