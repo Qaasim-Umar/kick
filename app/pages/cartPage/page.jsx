@@ -5,7 +5,7 @@ import Footer from '@/app/sections/footer';
 const products = [
   {
     name: 'Puma and Lamelo sneakers',
-    image: '/img/shoe.png',
+    image: '/img/bluenike.png',
     size: 'S',
     color: 'Color: Pink',
     quantity: 1,
@@ -13,7 +13,7 @@ const products = [
   },
   {
     name: 'Nike Free Metcon',
-    image: '/img/shoe.png',
+    image: '/img/blacknike.png',
     size: 'S',
     color: 'Color: Red',
     quantity: 1,
@@ -21,7 +21,7 @@ const products = [
   },
   {
     name: 'Air Jordan Retro',
-    image: '/img/shoe.png',
+    image: '/img/rednike.png',
     size: 'S',
     color: 'Color: Brown',
     quantity: 1,

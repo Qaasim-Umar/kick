@@ -126,18 +126,18 @@ export default function ProductDetail({ params }) {
 
 
             {/* Right Column: Product Details */}
-            <div className="flex-1 lg:ml-20">
+            <div className=" flex-1 lg:ml-20">
 
               <div className="container text-[#1C1B1F]">
-                <h1 className='font-space-grotesk font-semibold text-[24px] '>Product Description</h1>
+                <h1 className='font-space-grotesk font-semibold my-3 text-[24px] '>Product Description</h1>
                 <p className='text-14px'>These Nike G.T. Hustle 3 Blueprint shoes give the classic Samba silhouette a stylish, elevated update. The premium leather upper features embroidered 3-Stripes for a fresh edge while metallic accents add a touch of shine. The thick rubber outsole stands on its own but references the iconic look of the original style. Whether you pair them with jeans, tights or a maxi dress, they&apos;re perfect for adding a retro-cool vibe to any outfit.
                   As recreational running established widespread popularity in the 1970s, the benchmark for running footwear shifted from mere existence to performance. While the era&apos;s designs would be considered simple by today&apos;s standards, the decade stands out as the moment when running shoes truly came into their own. The New Balance 327 sheds new light on the &apos;70s as a time of innovation by boldly reshaping classic design elements with a thoroughly contemporary outlook. With an angular reworking of the tried-and-true wedge silhouette, outsize, asymmetrically applied &apos;N&apos; branding, and wraparound, trail-inspired lug outsole, the New Balance 327 provides nothing less than a complete reimagination of our running heritage.
                 </p>
               </div>
 
               <div className="container">
-                <h1 className='font-space-grotesk font-semibold text-[24px]'>Product Details</h1>
-                <div className="flex">
+                <h1 className='font-space-grotesk font-semibold text-[24px] my-3'>Product Details</h1>
+                <div className="flex ">
                   <ul className=' list-disc text-[14px] space-y-5'>
                     <li>Regular fit</li>
                     <li>Lace closure</li>
