@@ -23,8 +23,11 @@ const collection = () => {
           <div className=" p-1 font-space-grotesk">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
               <div className="grid grid-rows-3 gap-6">
+                
                 <div className="row-span-2 bg-[#EDEEF2] p-4 flex flex-col items-center justify-center">
+                <Link href="/pages/cartPage">
                   <Image src="/img/colored.png" width={100} height={100} alt="Product 1" className="object-cover w-[400px]" />
+                  </Link>
                   <Link href="/pages/cartPage">
                   <button className="mt-auto bg-white text-black py-2 px-4 rounded-full flex items-center">
                     <Image src="/img/blackcart.svg" width={20} height={20} alt="" className='pr-1' />
@@ -46,7 +49,9 @@ const collection = () => {
               </div>
               <div className="grid grid-rows-2 gap-6">
                 <div className="bg-[#DCCDC3] p-4 flex flex-col items-center justify-center">
+                <Link href="/pages/productPage">
                   <Image src="/img/orange.png" width={100} height={100} alt="Product 3" className="object-cover w-[380px]" />
+                  </Link>
                   <Link href="/pages/cartPage">
                   <button className="mt-auto bg-white text-black py-2 px-4 rounded-full flex items-center">
                     <Image src="/img/blackcart.svg" width={20} height={20} alt="" className='pr-1' />
@@ -55,8 +60,11 @@ const collection = () => {
                  </Link>
                 </div>
                 <div className="bg-[#D6D7DB] p-4 flex flex-col items-center justify-center">
+                <Link href="/pages/productPage">
                   <Image src="/img/whiteandblack.png" width={100} height={100} alt="Product 4" className="object-cover w-[380px]" />
+                  </Link>
 <Link href="/pages/cartPage">
+
                   <button className="mt-auto bg-white text-black py-2 px-4 rounded-full flex items-center">
                     <Image src="/img/blackcart.svg" width={20} height={20} alt="" className='pr-1' />
                     Add to cart
