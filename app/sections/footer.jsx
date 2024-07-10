@@ -27,6 +27,7 @@ const Footer = () => {
             onClick={() => toggleSection('shop')}
           >
             <h1>Shop</h1>
+            <div className='block lg:hidden'>
             <svg
               className={`w-5 h-5 transform transition-transform ${openSection === 'shop' ? 'rotate-180' : ''}`}
               fill="none"
@@ -36,6 +37,7 @@ const Footer = () => {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
             </svg>
+            </div>
           </div>
           <div className={`${openSection === 'shop' ? 'block' : 'hidden'} lg:block space-y-2`}>
             <p>Women</p>
@@ -49,6 +51,7 @@ const Footer = () => {
             onClick={() => toggleSection('information')}
           >
             <h1>Information</h1>
+            <div className='block lg:hidden'>
             <svg
               className={`w-5 h-5 transform transition-transform ${openSection === 'information' ? 'rotate-180' : ''}`}
               fill="none"
@@ -58,6 +61,7 @@ const Footer = () => {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
             </svg>
+            </div>
           </div>
           <div className={`${openSection === 'information' ? 'block' : 'hidden'} lg:block space-y-2`}>
             <p>Delivery information</p>
@@ -65,12 +69,13 @@ const Footer = () => {
             <p>Terms of service</p>
           </div>
         </div>
-        <div className="space-y-4 border-b  border-b-[#FFFFFF]">
+        <div className="space-y-4 border-b lg:border-b-[#000000]  border-b-[#FFFFFF]">
           <div
             className="flex items-center justify-between font-medium text-2xl cursor-pointer"
             onClick={() => toggleSection('company')}
           >
             <h1>Company</h1>
+            <div className='block lg:hidden'>
             <svg
               className={`w-5 h-5 transform transition-transform ${openSection === 'company' ? 'rotate-180' : ''}`}
               fill="none"
@@ -80,6 +85,7 @@ const Footer = () => {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
             </svg>
+            </div>
           </div>
           <div className={`${openSection === 'company' ? 'block' : 'hidden'} lg:block space-y-2`}>
             <p>About us</p>
@@ -101,6 +107,7 @@ const Footer = () => {
             onClick={() => toggleSection('contact')}
           >
             <h1>Contact Us</h1>
+            <div className='block lg:hidden'>
             <svg
               className={`w-5 h-5 transform transition-transform ${openSection === 'contact' ? 'rotate-180' : ''}`}
               fill="none"
@@ -110,6 +117,7 @@ const Footer = () => {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
             </svg>
+            </div>
           </div>
           <div className={`${openSection === 'contact' ? 'block' : 'hidden'} lg:block space-y-2`}>
             <p>Kicks@gmail.com</p>
