@@ -47,6 +47,7 @@ function SimpleSlider() {
           dots: true,
           centerMode: false, // Disable center mode for mobile
           centerPadding: '0px',
+          arrows: false,
         },
       },
     ],
@@ -59,7 +60,7 @@ function SimpleSlider() {
       <div className="px-4">
         <Slider {...settings}>
           <div className="px-2 custom-slider-item">
-            <Image src="/img/middle.png" width={400} height={400} alt="Middle Image" />
+            <Image src="/img/middle.png" width={400} height={400}  alt="Middle Image" />
           </div>
           <div className="px-2 custom-slider-item">
             <Image src="/img/right.png" width={300} height={300} alt="Right Image" />
