@@ -20,7 +20,7 @@ export default function Home() {
      <Collection/>
      <Advert/>
      <Products/>
-     {/* <Deals/> */}
+     <Deals/>
      <Sneakers/>
      <You/>
      <Footer/>
