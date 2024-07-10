@@ -89,7 +89,7 @@ const sneakers = () => {
 
 
 <div className="min-h-screen  lg:px-[130px] px-5 py-14 font-space-grotesk">
-        <h2 className="lg:text-[64px] text-[24px] font-medium mb-14 text-center ">Recently viewed</h2>
+        <h2 className="lg:text-[64px] text-[24px] font-medium mb-14 text-center ">Sneakers for you</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 ">
           {product.map((product, index) => (
             <div key={index} className="border border-gray-[#EDEEF2] rounded-lg flex flex-col">
