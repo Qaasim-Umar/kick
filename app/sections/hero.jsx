@@ -8,7 +8,7 @@ const hero = () => {
         <div className="lg:w-1/2 flex items-center justify-center">
           {/* Left half content  */}
           <div className=' flex-row space-y-6'>
-            <p className='lg:text-[76px] text-[36px] lg:leading-[78px] leading-[45px] font-semibold font-space-grotesk'>Discover <br/> your perfect <span className='text-[#BA9B88]'>sneakers</span> here </p>
+            <p className='lg:text-[76px] text-[38px] lg:leading-[78px] leading-[45px] font-semibold font-space-grotesk'>Discover <br/> your perfect <span className='text-[#BA9B88]'>sneakers</span> here </p>
 
             <p className='lg:text-[22px] text-[20px] leading-[36px] lg:leading-[28px]'>Explore the latest trends and timeless classics in sneakers, all in one place: from casual kicks to high-performance athletic shoes. We&apos;ve got your feet covered</p>
 

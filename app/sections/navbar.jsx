@@ -15,7 +15,7 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg
-            className="fill-current h-4 w-4"
+            className="fill-current h-8 w-8 mt-2"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -25,7 +25,7 @@ const Navbar = () => {
         </button>
         <div className="lg:flex lg:gap-10">
           <div className="text-2xl font-bold lg:pl-10 lg:-mt-2">
-            <Image src="/img/logo.svg" width={53} height={53} alt="" />
+            <Image src="/img/logo.svg" width={80} height={80} alt="" />
           </div>
           <div className="hidden md:flex items-center lg:space-x-6 space-x-4 font-space-grotesk font-medium">
             <Link href="#" legacyBehavior>
