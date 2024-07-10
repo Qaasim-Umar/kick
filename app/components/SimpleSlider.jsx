@@ -17,6 +17,7 @@ function SimpleSlider() {
     centerPadding: '60px',
     slidesToShow: 3,
     speed: 500,
+    dots: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -54,7 +55,7 @@ function SimpleSlider() {
   };
 
   return (
-    <div className="bg-[#EDEEF2] py-10">
+    <div className="bg-[#EDEEF2] py-14">
 <h1 className='lg:text-[64px] font-medium font-space-grotesk text-[24px] text-center mb-5'>Deal of the day</h1>
 
       <div className="px-4">
