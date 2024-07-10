@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const advert = () => {
   return (
-    <div className='lg:p-[45px] p-4 bg-[#EDEEF2] my-[110px]  relative '>
+    <div className='lg:p-[45px] p-4 bg-[#EDEEF2] lg:my-[110px] mt-5  relative '>
 
 
       <div className="flex ">
