@@ -21,7 +21,7 @@ export default function Home() {
      <Advert/>
      <Products/>
      {/* <Deals/> */}
-     {/* <Sneakers/> */}
+     <Sneakers/>
      <You/>
      <Footer/>
     </main>
