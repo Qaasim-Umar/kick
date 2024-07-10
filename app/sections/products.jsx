@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const product = [
   {
@@ -59,7 +60,9 @@ const products = () => {
           {product.map((product, index) => (
             <div key={index} className="border border-gray-[#EDEEF2] rounded-lg flex flex-col">
               <div className="relative bg-[#EDEEF2] rounded-lg">
+              <Link href="/pages/productPage">
                 <Image src={product.image} alt={product.name} width={500} height={500} className="object-cover rounded-t-lg" />
+               </Link>
                 <button className="absolute top-4 right-3 bg-white p-1 rounded-full border border-gray-[#EDEEF2]">
                   <Image src="/img/love.svg" alt="" width={40} height={40} />
                 </button>
