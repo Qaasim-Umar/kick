@@ -75,7 +75,7 @@ const Navbar = () => {
 
 
 
-      <div className="lg:hidden flex gap-4 -ml-[100px] ">
+      <div className="lg:hidden flex gap-4 mr-[65px] ">
         <Link href="#" legacyBehavior>
           <Image src="/img/searchplain.svg"  width={20} height={20} alt="" />
         </Link>

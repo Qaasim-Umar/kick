@@ -23,7 +23,7 @@ export default function Home() {
      {/* <Deals/> */}
      {/* <Sneakers/> */}
      {/* <You/> */}
-     {/* <Footer/> */}
+     <Footer/>
     </main>
   );
 }
