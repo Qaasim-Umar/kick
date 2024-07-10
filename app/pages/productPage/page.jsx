@@ -5,6 +5,7 @@ import Footer from '@/app/sections/footer';
 import Image from 'next/image';
 import Navbar from '@/app/sections/navbar';
 import Link from 'next/link';
+import Swipe from '@/app/sections/swipe';
 
 export default function ProductDetail({ params }) {
   const router = useRouter();
@@ -158,6 +159,11 @@ export default function ProductDetail({ params }) {
           </div>
         </div>
 
+
+        <div className='mt-10'>
+          <h1 className=' font-space-grotesk lg:text-[64px] text-[24px] font-medium mb-10'> We think you’ll like these </h1>
+          <Swipe/>
+        </div>
 
 
 
