@@ -54,10 +54,10 @@ const Navbar = () => {
               <a className="hover:underline">Favourites</a>
             </div>
           </Link>
-          <Link href="#" legacyBehavior>
-            <div className="flex gap-1">
+          <Link href="/pages/cartPage" legacyBehavior>
+            <div className="flex gap-1 hover:underline">
               <Image src="/img/cart.svg" width={20} height={20} alt="" />
-              <a className="hover:underline">Cart</a>
+              <a className="">Cart</a>
             </div>
           </Link>
           <Link href="#" legacyBehavior>
@@ -82,7 +82,7 @@ const Navbar = () => {
         <Link href="#" legacyBehavior>
         <Image src="/img/love2.svg"  width={20} height={20} alt="" />
         </Link>
-        <Link href="#" legacyBehavior>
+        <Link href="/pages/cartPage" legacyBehavior>
         <Image src="/img/cart.svg"  width={20} height={20} alt="" />
         </Link>
         <Link href="#" legacyBehavior>

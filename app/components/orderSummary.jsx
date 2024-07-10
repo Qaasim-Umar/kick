@@ -1,7 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
+
 
 const OrderSummary = ({ total }) => {
   return (
+   
     <div>
 
 
@@ -12,8 +15,9 @@ const OrderSummary = ({ total }) => {
           <span className="lg:font-medium font-semibold lg:text-[28px] ">Sub Total</span>
           <span className="font-semibold lg:text-[36px] text-[20px]">${total.toFixed(2)}</span>
         </div>
+        <Link href="/pages/checkout">
         <button className="bg-[#141311] text-white mt-[20px] w-full lg:py-2 py-3 rounded font-medium lg:text-[24px]">Checkout now</button>
-
+</Link>
       </div>
 
 

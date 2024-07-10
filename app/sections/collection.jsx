@@ -32,8 +32,10 @@ const collection = () => {
                   </button>
                   </Link>
                 </div>
-                <div className="bg-[#B8AEA7] p-4 flex flex-col items-center justify-center">
+                <div className="bg-[#B8AEA7] p-4 flex flex-col items-center justify-center cursor-pointer">
+                <Link href="/pages/productPage">
                   <Image src="/img/white.png" width={100} height={100} alt="Product 2" className="object-cover w-[350px]" />
+                  </Link>
                   <Link href="/pages/cartPage">
                   <button className="mt-auto bg-white text-black py-2 px-4 rounded-full flex items-center">
                     <Image src="/img/blackcart.svg" width={20} height={20} alt="" className='pr-1' />

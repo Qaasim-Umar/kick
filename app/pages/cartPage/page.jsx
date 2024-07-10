@@ -1,6 +1,7 @@
 import CartItem from '@/app/components/cartItem';
 import OrderSummary from '@/app/components/orderSummary';
 import Footer from '@/app/sections/footer';
+import Navbar from '@/app/sections/navbar';
 
 const products = [
   {
@@ -34,6 +35,7 @@ const CartPage = () => {
 
   return (
     <div>
+      <Navbar/>
       <div className="container mx-auto lg:p-20 p-4 ">
         <div className="flex flex-col lg:flex-row justify-between items-start space-y-4 lg:space-y-0 lg:space-x-4">
           <div className="w-full lg:w-2/3">

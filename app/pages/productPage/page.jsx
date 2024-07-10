@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import Footer from '@/app/sections/footer';
 import Image from 'next/image';
+import Navbar from '@/app/sections/navbar';
 
 export default function ProductDetail({ params }) {
   const router = useRouter();
@@ -34,16 +35,17 @@ export default function ProductDetail({ params }) {
 
   return (
     <div>
+      <Navbar/>
       <div className="container mx-auto p-4">
         <div className="flex flex-col lg:flex-row">
           {/* Left Column: Product Images */}
           <div className="flex-1">
-            <Image src="/img/red.png" alt="Product" width={100} height={100} className="h-[67vh] w-full object-cover bg-[#EDEEF2]" />
-            <div className="flex space-x-2 mt-2">
-              <Image src="/img/red.png" alt="Product" width={100} height={100} className="w-1/5 bg-[#EDEEF2]" />
-              <Image src="/img/red.png" alt="Product" width={100} height={100} className="w-1/5 bg-[#EDEEF2]" />
-              <Image src="/img/red.png" alt="Product" width={100} height={100} className="w-1/5 bg-[#EDEEF2]" />
-              <Image src="/img/red.png" alt="Product" width={100} height={100} className="w-1/5 bg-[#EDEEF2]" />
+            <Image src="/img/c.png" alt="Product" width={200} height={200} className="h-[67vh] w-full object-cover bg-[#EDEEF2]" />
+            <div className="flex lg:space-x-10 space-x-5 mt-2">
+              <Image src="/img/c1.png" alt="Product" width={150} height={100} className="w-1/5 bg-[#EDEEF2]" />
+              <Image src="/img/c2.png" alt="Product" width={150} height={100} className="w-1/5 bg-[#EDEEF2]" />
+              <Image src="/img/c3.png" alt="Product" width={150} height={100} className="w-1/5 bg-[#EDEEF2]" />
+              <Image src="/img/c4.png" alt="Product" width={150} height={100} className="w-1/5 bg-[#EDEEF2]" />
             </div>
           </div>
 
@@ -57,10 +59,10 @@ export default function ProductDetail({ params }) {
               <h2 className="text-[20px] font-space-grotesk mb-2 font-medium">Choose a colour</h2>
               <div className="flex space-x-2 mt-2 lg:space-x-10">
                 {/* Colour options */}
-                <Image src='' className="w-[80px] h-[80px] bg-[#EDEEF2]  rounded-[4px]" />
-                <Image src='' className="w-[80px] h-[80px] bg-[#EDEEF2]  rounded-[4px]" />
-                <Image src='' className="w-[80px] h-[80px] bg-[#EDEEF2]  rounded-[4px]" />
-                <Image src='' className="w-[80px] h-[80px] bg-[#EDEEF2]  rounded-[4px]" />
+                <Image src='/img/bluenike.png' width={150} height={100} className="w-[80px] h-[80px] bg-[#EDEEF2]  rounded-[4px]" />
+                <Image src='/img/red.png' width={150} height={100} className="w-[80px] h-[80px] bg-[#EDEEF2]  rounded-[4px]" />
+                <Image src='/img/colored.png' width={150} height={100} className="w-[80px] h-[80px] bg-[#EDEEF2]  rounded-[4px]" />
+                <Image src='/img/rednike.png' width={150} height={100} className="w-[80px] h-[80px] bg-[#EDEEF2]  rounded-[4px]" />
               </div>
             </div>
 
@@ -135,7 +137,7 @@ export default function ProductDetail({ params }) {
                 </p>
               </div>
 
-              <div className="container">
+              <div className="container ml-3">
                 <h1 className='font-space-grotesk font-semibold text-[24px] my-3'>Product Details</h1>
                 <div className="flex ">
                   <ul className=' list-disc text-[14px] space-y-5'>
