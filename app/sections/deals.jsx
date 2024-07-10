@@ -1,10 +1,10 @@
-import React from 'react'
-import DealOfTheDaySlider from '../components/SimpleSlider'
+
+import SimpleSlider from '../components/SimpleSlider'
 
 const deals = () => {
   return (
     <div>
-<DealOfTheDaySlider/>
+<SimpleSlider/>
     </div>
   )
 }
