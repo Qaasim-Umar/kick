@@ -19,7 +19,7 @@ export default function Home() {
      <Benefit/>
      <Collection/>
      {/* <Advert/> */}
-     {/* <Products/> */}
+     <Products/>
      {/* <Deals/> */}
      {/* <Sneakers/> */}
      {/* <You/> */}

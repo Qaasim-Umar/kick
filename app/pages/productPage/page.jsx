@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import Footer from '@/app/sections/footer';
 import Image from 'next/image';
 import Navbar from '@/app/sections/navbar';
+import Link from 'next/link';
 
 export default function ProductDetail({ params }) {
   const router = useRouter();
@@ -35,7 +36,7 @@ export default function ProductDetail({ params }) {
 
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="container mx-auto p-4">
         <div className="flex flex-col lg:flex-row">
           {/* Left Column: Product Images */}
@@ -75,8 +76,12 @@ export default function ProductDetail({ params }) {
                 ))}
               </div>
             </div>
-
-            <button className="mt-4 bg-black text-white py-2 px-4 rounded">Add to cart</button>
+            <Link href="/pages/cartPage">
+            <div className="flex items-center  gap-5">
+              <button className="mt-4 bg-black text-white py-2 px-4 rounded w-full">Add to cart</button>
+              <Image src="/img/love3.svg" alt="" width={40} height={40} className='mt-4' />
+            </div>
+            </Link>
           </div>
         </div>
 
