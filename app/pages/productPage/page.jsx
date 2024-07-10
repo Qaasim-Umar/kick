@@ -77,19 +77,13 @@ export default function ProductDetail({ params }) {
               </div>
             </div>
             <Link href="/pages/cartPage">
-            <div className="flex items-center  gap-5">
-              <button className="mt-4 bg-black text-white py-2 px-4 rounded w-full">Add to cart</button>
-              <Image src="/img/love3.svg" alt="" width={40} height={40} className='mt-4' />
-            </div>
+              <div className="flex items-center  gap-5">
+                <button className="mt-4 bg-black text-white py-2 px-4 rounded w-full">Add to cart</button>
+                <Image src="/img/love3.svg" alt="" width={40} height={40} className='mt-4' />
+              </div>
             </Link>
           </div>
         </div>
-
-
-
-
-
-
 
 
 
@@ -122,13 +116,7 @@ export default function ProductDetail({ params }) {
                   ))}
                 </div>
               </div>
-
-
-
             </div>
-
-
-
 
 
 

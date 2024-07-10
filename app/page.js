@@ -18,11 +18,11 @@ export default function Home() {
      <Hero/>
      <Benefit/>
      <Collection/>
-     {/* <Advert/> */}
+     <Advert/>
      <Products/>
      {/* <Deals/> */}
      {/* <Sneakers/> */}
-     {/* <You/> */}
+     <You/>
      <Footer/>
     </main>
   );

@@ -1,8 +1,11 @@
 import React from 'react'
+import SimpleSlider from '../components/SimpleSlider'
 
 const you = () => {
   return (
-    <div>you</div>
+    <div>
+    <SimpleSlider/>
+    </div>
   )
 }
 
