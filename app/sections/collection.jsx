@@ -25,26 +25,32 @@ const collection = () => {
               <div className="grid grid-rows-3 gap-6">
                 <div className="row-span-2 bg-[#EDEEF2] p-4 flex flex-col items-center justify-center">
                   <Image src="/img/colored.png" width={100} height={100} alt="Product 1" className="object-cover w-[400px]" />
+                  <Link href="/pages/cartPage">
                   <button className="mt-auto bg-white text-black py-2 px-4 rounded-full flex items-center">
                     <Image src="/img/blackcart.svg" width={20} height={20} alt="" className='pr-1' />
                     Add to cart
                   </button>
+                  </Link>
                 </div>
                 <div className="bg-[#B8AEA7] p-4 flex flex-col items-center justify-center">
                   <Image src="/img/white.png" width={100} height={100} alt="Product 2" className="object-cover w-[350px]" />
+                  <Link href="/pages/cartPage">
                   <button className="mt-auto bg-white text-black py-2 px-4 rounded-full flex items-center">
                     <Image src="/img/blackcart.svg" width={20} height={20} alt="" className='pr-1' />
                     Add to cart
                   </button>
+                  </Link>
                 </div>
               </div>
               <div className="grid grid-rows-2 gap-6">
                 <div className="bg-[#DCCDC3] p-4 flex flex-col items-center justify-center">
                   <Image src="/img/orange.png" width={100} height={100} alt="Product 3" className="object-cover w-[380px]" />
+                  <Link href="/pages/cartPage">
                   <button className="mt-auto bg-white text-black py-2 px-4 rounded-full flex items-center">
                     <Image src="/img/blackcart.svg" width={20} height={20} alt="" className='pr-1' />
                     Add to cart
                   </button>
+                 </Link>
                 </div>
                 <div className="bg-[#D6D7DB] p-4 flex flex-col items-center justify-center">
                   <Image src="/img/whiteandblack.png" width={100} height={100} alt="Product 4" className="object-cover w-[380px]" />
