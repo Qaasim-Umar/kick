@@ -98,16 +98,16 @@ const Navbar = () => {
         <div className="md:hidden mt-2 mb-4">
           <div className="flex flex-col space-y-3 font-space-grotesk font-medium">
             <Link href="#" legacyBehavior>
-              <a className="hover:underline">Collections</a>
+              <a className="hover:underline  text-[24px]">Collections</a>
             </Link>
             <Link href="#" legacyBehavior>
-              <a className="hover:underline">Sales</a>
+              <a className="hover:underline  text-[24px]">Sales</a>
             </Link>
             <Link href="#" legacyBehavior>
-              <a className="hover:underline">Delivery</a>
+              <a className="hover:underline  text-[24px]">Delivery</a>
             </Link>
             <Link href="#" legacyBehavior>
-              <a className="hover:underline">Why us</a>
+              <a className="hover:underline  text-[24px]">Why us</a>
             </Link>
             <input
               type="text"
