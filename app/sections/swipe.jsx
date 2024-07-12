@@ -51,8 +51,8 @@ function Swipe() {
                             </button>
                         </div>
 
-                        <div className="p-4 bg-white rounded-b-lg ">
-                            <p className="lg:text-[26px] font-medium font-space-grotesk">Nike Airforce 1 07</p>
+                        <div className="p-4 bg-white rounded-b-lg ''">
+                            <p className="lg:text-[26px] font-medium font-space-grotesk">Nike Airforce 107</p>
                             <div className="mt-2 flex justify-between">
                                 <span className="text-[14px] lg:text-xl font-bold">$80</span>
                                 <span className="text-gray-500 text-sm flex items-center ">
@@ -83,7 +83,7 @@ function Swipe() {
 
                         <div className="p-4 bg-white rounded-b-lg flex justify-between">
                             <div>
-                            <p className="lg:text-[26px] font-medium font-space-grotesk">Nike Air Max 90</p>
+                            <p className="lg:text-[26px] font-medium font-space-grotesk">Nike Air Max 901</p>
                             <div className="mt-2 flex justify-between">
                                 <span className="text-[14px] lg:text-xl font-bold">$120</span>
                                 <span className="text-gray-500 text-sm flex items-center ">
