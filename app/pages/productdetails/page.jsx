@@ -24,7 +24,7 @@ async function fetchProduct(id) {
 export default function ProductDetails() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true); // Changed from 'loading' to 'isLoading'
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export default function ProductDetails() {
     }
   }, [id]);
 
-  if (loading) {
+  if (isLoading) { // Changed from 'loading' to 'isLoading'
     return <div>Loading...</div>;
   }
 
