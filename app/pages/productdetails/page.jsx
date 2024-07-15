@@ -98,10 +98,10 @@ export default function ProductDetails() {
             <div className="mt-4">
               <h2 className="text-[20px] font-space-grotesk mb-2 font-medium">Choose a colour</h2>
               <div className="flex space-x-2 mt-2 lg:space-x-10">
-                <Image src='/img/bluenike.png' width={150} height={100} className="w-[80px] h-[80px] bg-[#EDEEF2] rounded-[4px]" />
-                <Image src='/img/red.png' width={150} height={100} className="w-[80px] h-[80px] bg-[#EDEEF2] rounded-[4px]" />
-                <Image src='/img/colored.png' width={150} height={100} className="w-[80px] h-[80px] bg-[#EDEEF2] rounded-[4px]" />
-                <Image src='/img/rednike.png' width={150} height={100} className="w-[80px] h-[80px] bg-[#EDEEF2] rounded-[4px]" />
+                <Image src='/img/bluenike.png'  alt="Product" width={150} height={100} className="w-[80px] h-[80px] bg-[#EDEEF2] rounded-[4px]" />
+                <Image src='/img/red.png'  alt="Product" width={150} height={100} className="w-[80px] h-[80px] bg-[#EDEEF2] rounded-[4px]" />
+                <Image src='/img/colored.png'  alt="Product" width={150} height={100} className="w-[80px] h-[80px] bg-[#EDEEF2] rounded-[4px]" />
+                <Image src='/img/rednike.png'  alt="Product" width={150} height={100} className="w-[80px] h-[80px] bg-[#EDEEF2] rounded-[4px]" />
               </div>
             </div>
 
