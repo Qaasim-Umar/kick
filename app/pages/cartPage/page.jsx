@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useState } from 'react';
 import CartItem from '@/app/components/cartItem';
 import OrderSummary from '@/app/components/orderSummary';
