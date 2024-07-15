@@ -1,5 +1,5 @@
-'use client'
-import { useRouter } from 'next/navigation ';
+'use client';
+
 import { useEffect, useState } from 'react';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
@@ -7,35 +7,40 @@ import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 import Swipe from '@/components/Swipe';
 import axios from 'axios';
+import { useParams } from 'next/navigation';
+
+// Fetch function moved outside the component for better reusability and testing.
+async function fetchProduct(id) {
+  const url = `https://api.timbu.cloud/products/${id}?organization_id=${process.env.NEXT_PUBLIC_ORG_ID}&page=1&size=30&Appid=${process.env.NEXT_PUBLIC_APP_ID}&Apikey=${process.env.NEXT_PUBLIC_API_KEY}`;
+  const response = await axios.get(url);
+
+  if (response.status !== 200) {
+    throw new Error('Network response was not ok');
+  }
+
+  return response.data;
+}
 
 export default function ProductDetails() {
-  const router = useRouter();
-  const { id } = router.query;
-
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    async function getProduct() {
+      try {
+        const data = await fetchProduct(id);
+        setProduct(data);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
     if (id) {
-      const fetchProduct = async () => {
-        try {
-          const url = `https://api.timbu.cloud/products/${id}?organization_id=${process.env.NEXT_PUBLIC_ORG_ID}&page=1&size=30&Appid=${process.env.NEXT_PUBLIC_APP_ID}&Apikey=${process.env.NEXT_PUBLIC_API_KEY}`;
-          const response = await axios.get(url);
-
-          if (response.status !== 200) {
-            throw new Error('Network response was not ok');
-          }
-
-          setProduct(response.data);
-        } catch (error) {
-          setError(error.message);
-        } finally {
-          setLoading(false);
-        }
-      };
-
-      fetchProduct();
+      getProduct();
     }
   }, [id]);
 
@@ -130,7 +135,7 @@ export default function ProductDetails() {
                   {reviews.map((review, index) => (
                     <div key={index} className="py-4">
                       <h2 className="text-xl font-semibold">{review.name}</h2>
-                      <div className="flex gap-2"><Image src="/img/star.svg" width={120} height={120} alt="" /> <small>2 days ago</small></div>
+                      <div className="flex gap-2"><Image src="/img/star.svg" width={120} height={120} alt="" /> <small>2days ago</small></div>
                       <div className="flex items-start justify-between">
                         <p className="mt-2 text-gray-700 w-[70%]">{review.review}</p>
                         <Image src="/img/thumb.svg" width={30} height={30} alt="" />
@@ -144,7 +149,9 @@ export default function ProductDetails() {
             <div className="flex-1 lg:ml-20">
               <div className="container text-[#1C1B1F]">
                 <h1 className='font-space-grotesk font-semibold my-3 text-[24px]'>Product Description</h1>
-                <p className='text-14px'>{product.description}</p>
+                <p className='text-14px'>
+                  {product.description}
+                </p>
               </div>
 
               <div className="container ml-3">
@@ -155,7 +162,7 @@ export default function ProductDetails() {
                     <li>Lace closure</li>
                     <li>Leather upper</li>
                     <li>Textile and Synthetic lining</li>
-                    <li>Rubber outsole</li>
+                    <li>Rubber outside</li>
                   </ul>
 
                   <ul className='list-disc text-[14px] space-y-5'>
@@ -169,8 +176,8 @@ export default function ProductDetails() {
           </div>
         </div>
 
-        <div className='mt-10'>
-          <h1 className='font-space-grotesk lg:text-[64px] text-[24px] font-medium mb-10'>We think you’ll like these</h1>
+        <div className="container mx-auto p-4">
+          <h2 className="text-2xl font-semibold mt-8">Similar Items</h2>
           <Swipe />
         </div>
       </div>
