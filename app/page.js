@@ -10,7 +10,6 @@ import You from "./sections/you";
 import Navbar from "./sections/navbar";
 
 
-
 export default function Home() {
   return (
     <main>

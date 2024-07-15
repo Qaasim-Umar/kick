@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CartItem from '@/app/components/cartItem';
 import OrderSummary from '@/app/components/orderSummary';
 import Footer from '@/app/sections/footer';
@@ -7,32 +7,39 @@ import Navbar from '@/app/sections/navbar';
 import Swipe from '@/app/sections/swipe';
 
 const CartPage = () => {
-  const [products, setProducts] = useState([
-    {
-      name: 'Puma and Lamelo sneakers',
-      image: '/img/bluenike.png',
-      size: 'S',
-      color: 'Color: Pink',
-      quantity: 1,
-      price: 500.00
-    },
-    {
-      name: 'Nike Free Metcon',
-      image: '/img/blacknike.png',
-      size: 'S',
-      color: 'Color: Red',
-      quantity: 1,
-      price: 120.00
-    },
-    {
-      name: 'Air Jordan Retro',
-      image: '/img/rednike.png',
-      size: 'S',
-      color: 'Color: Brown',
-      quantity: 1,
-      price: 115.00
-    },
-  ]);
+  const [products, setProducts] = useState(() => {
+    const storedProducts = localStorage.getItem('cartProducts');
+    return storedProducts ? JSON.parse(storedProducts) : [
+      {
+        name: 'Puma and Lamelo sneakers',
+        image: '/img/bluenike.png',
+        size: 'S',
+        color: 'Color: Pink',
+        quantity: 1,
+        price: 500.00
+      },
+      {
+        name: 'Nike Free Metcon',
+        image: '/img/blacknike.png',
+        size: 'S',
+        color: 'Color: Red',
+        quantity: 1,
+        price: 120.00
+      },
+      {
+        name: 'Air Jordan Retro',
+        image: '/img/rednike.png',
+        size: 'S',
+        color: 'Color: Brown',
+        quantity: 1,
+        price: 115.00
+      },
+    ];
+  });
+
+  useEffect(() => {
+    localStorage.setItem('cartProducts', JSON.stringify(products));
+  }, [products]);
 
   const total = products.reduce((acc, product) => acc + product.price * product.quantity, 0);
 
