@@ -1,11 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Footer from '@/components/Footer';
+import Footer from '@/app/sections/footer';
 import Image from 'next/image';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/app/sections/navbar';
 import Link from 'next/link';
-import Swipe from '@/components/Swipe';
+import Swipe from '@/app/sections/swipe';
 import axios from 'axios';
 import { useParams } from 'next/navigation';
 
