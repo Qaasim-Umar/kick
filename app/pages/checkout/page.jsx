@@ -1,12 +1,23 @@
-import Image from "next/image";
-import Footer from "@/app/sections/footer";
-import Navbar from "@/app/sections/navbar";
+'use client'
 
+import { useEffect, useState } from 'react';
+import Navbar from '@/app/sections/navbar';
+import Footer from '@/app/sections/footer';
+import Image from 'next/image';
 
-export default function Checkout() {
+const CheckoutPage = () => {
+  const [products, setProducts] = useState(() => {
+    const storedProducts = localStorage.getItem('cartProducts');
+    return storedProducts ? JSON.parse(storedProducts) : [];
+  });
+
+  useEffect(() => {
+    localStorage.removeItem('cartProducts'); // Optionally clear localStorage after checkout
+  }, []);
+
   return (
     <div className="">
-      <Navbar/>
+      <Navbar />
       <div className=" lg:p-20 p-5 rounded-lg shadow-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="  ">
@@ -15,51 +26,22 @@ export default function Checkout() {
 
               <h2 className="text-[#141311] lg:text-[36px] text-[24px] font-medium font-space-grotesk mb-4">Review product</h2>
               <div className="mb-4">
-                <div className="flex justify-between items-center mb-2  ">
-                  <div className="flex items-center">
-                    <Image src="/img/colored.png" alt="Puma and Lamelo sneakers" width={100} height={100} className="w-12 h-12 mr-2 bg-[#EDEEF2]" />
-                    <div>
-                      <h3 className="font-semibold text-[#141311] font-space-grotesk lg:text-[24px]">Puma and Lamelo sneakers</h3>
-                      <p className="text-[#4F4F4F]">Size: 45, Colour: Pink</p>
+                {products.map((product, index) => (
+                  <div key={index} className="flex justify-between items-center mb-2  ">
+                    <div className="flex items-center">
+                      <Image src={product.image} alt={product.name} width={100} height={100} className="w-12 h-12 mr-2 bg-[#EDEEF2]" />
+                      <div>
+                        <h3 className="font-semibold text-[#141311] font-space-grotesk lg:text-[24px]">{product.name}</h3>
+                        <p className="text-[#4F4F4F]">Size: {product.size}, Colour: {product.color}</p>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-end">
+                      <p className="text-[#141311] text-[20px] font-medium">${(product.price * product.quantity).toFixed(2)}</p>
+                      <p className="text-[#141311] text-[12px]">Quantity: {product.quantity}</p>
                     </div>
                   </div>
-
-                  <div className="flex flex-col items-end">
-                    <p className="text-[#141311] text-[20px] font-medium">$500.00</p>
-                    <p className="text-[#141311] text-[12px]">Quantity: 02</p>
-                  </div>
-
-                </div>
-                <div className="flex justify-between items-center mb-2 ">
-                  <div className="flex items-center">
-                    <Image src="/img/blacknike.png" alt="Nike Free Metcon" width={100} height={100} className="w-12 h-12 mr-2 bg-[#EDEEF2]" />
-                    <div>
-                      <h3 className="font-semibold text-[#141311] font-space-grotesk lg:text-[24px]">Nike Free Metcon</h3>
-                      <p className="text-[#4F4F4F]">Size: 40, Colour: Pink</p>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col items-end">
-                    <p className="text-[#141311] text-[20px] font-medium">$120.00</p>
-                    <p className="text-[#141311]  text-[12px]">Quantity: 01</p>
-                  </div>
-
-                </div>
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center">
-                    <Image src="/img/blacki.png" alt="Air Jordan Retro" width={100} height={100} className="w-12 h-12 mr-2 bg-[#EDEEF2]" />
-                    <div>
-                      <h3 className="font-semibold text-[#141311] font-space-grotesk lg:text-[24px]">Air Jordan Retro</h3>
-                      <p className="text-[#4F4F4F]">Size: 45, Colour: Pink</p>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col items-end">
-                    <p className="text-[#141311] text-[20px] font-medium">$115.00</p>
-                    <p className="text-[#141311]  text-[12px]">Quantity: 02</p>
-                  </div>
-
-                </div>
+                ))}
               </div>
             </div>
             <div className="flex items-center my-10">
@@ -75,42 +57,42 @@ export default function Checkout() {
 
               <form className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
 
-<div>
-  <p className="font-space-grotesk font-medium text-[20px] text-[#141311]">First name*</p>
-  <input type="text" placeholder="Enter here" className="p-2 w-full md:w-[90%] border border-[#B7B7B7] rounded" />
-</div>
+                <div>
+                  <p className="font-space-grotesk font-medium text-[20px] text-[#141311]">First name*</p>
+                  <input type="text" placeholder="Enter here" className="p-2 w-full md:w-[90%] border border-[#B7B7B7] rounded" />
+                </div>
 
-<div className="md:ml-5">
-  <p className="font-space-grotesk font-medium text-[20px] text-[#141311]">Last name*</p>
-  <input type="text" placeholder="Enter here" className="p-2 w-full md:w-[90%] border border-[#B7B7B7] rounded" />
-</div>
+                <div className="md:ml-5">
+                  <p className="font-space-grotesk font-medium text-[20px] text-[#141311]">Last name*</p>
+                  <input type="text" placeholder="Enter here" className="p-2 w-full md:w-[90%] border border-[#B7B7B7] rounded" />
+                </div>
 
-<div className="col-span-1 md:col-span-2">
-  <p className="font-space-grotesk font-medium text-[20px] text-[#141311]">Address*</p>
-  <input type="text" placeholder="Enter here" className="p-2 w-full border border-[#B7B7B7] rounded" />
-</div>
+                <div className="col-span-1 md:col-span-2">
+                  <p className="font-space-grotesk font-medium text-[20px] text-[#141311]">Address*</p>
+                  <input type="text" placeholder="Enter here" className="p-2 w-full border border-[#B7B7B7] rounded" />
+                </div>
 
-<div>
-  <p className="font-space-grotesk font-medium text-[20px] text-[#141311]">City*</p>
-  <input type="text" placeholder="Enter here" className="p-2 w-full md:w-[90%] border border-[#B7B7B7] rounded" />
-</div>
+                <div>
+                  <p className="font-space-grotesk font-medium text-[20px] text-[#141311]">City*</p>
+                  <input type="text" placeholder="Enter here" className="p-2 w-full md:w-[90%] border border-[#B7B7B7] rounded" />
+                </div>
 
-<div className="md:ml-5">
-  <p className="font-space-grotesk font-medium text-[20px] text-[#141311]">Country*</p>
-  <input type="text" placeholder="Enter here" className="p-2 w-full md:w-[90%] border border-[#B7B7B7] rounded" />
-</div>
+                <div className="md:ml-5">
+                  <p className="font-space-grotesk font-medium text-[20px] text-[#141311]">Country*</p>
+                  <input type="text" placeholder="Enter here" className="p-2 w-full md:w-[90%] border border-[#B7B7B7] rounded" />
+                </div>
 
-<div>
-  <p className="font-space-grotesk font-medium text-[20px] text-[#141311]">Email address*</p>
-  <input type="email" placeholder="Enter here" className="p-2 w-full md:w-[90%] border border-[#B7B7B7] rounded" />
-</div>
+                <div>
+                  <p className="font-space-grotesk font-medium text-[20px] text-[#141311]">Email address*</p>
+                  <input type="email" placeholder="Enter here" className="p-2 w-full md:w-[90%] border border-[#B7B7B7] rounded" />
+                </div>
 
-<div className="md:ml-5">
-  <p className="font-space-grotesk font-medium text-[20px] text-[#141311]">Phone number*</p>
-  <input type="tel" placeholder="Enter here" className="p-2 w-full md:w-[90%] border border-[#B7B7B7] rounded" />
-</div>
+                <div className="md:ml-5">
+                  <p className="font-space-grotesk font-medium text-[20px] text-[#141311]">Phone number*</p>
+                  <input type="tel" placeholder="Enter here" className="p-2 w-full md:w-[90%] border border-[#B7B7B7] rounded" />
+                </div>
 
-</form>
+              </form>
 
 
             </div>
@@ -180,11 +162,11 @@ export default function Checkout() {
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span>Sub Total</span>
-                  <span>$855.00</span>
+                  <span>${(products.reduce((acc, product) => acc + product.price * product.quantity, 0)).toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Tax(15%)</span>
-                  <span>$32.00</span>
+                  <span>${((products.reduce((acc, product) => acc + product.price * product.quantity, 0)) * 0.15).toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Delivery fee</span>
@@ -192,7 +174,7 @@ export default function Checkout() {
                 </div>
                 <div className="flex justify-between font-semibold">
                   <span>Total</span>
-                  <span>$940.00</span>
+                  <span>${(((products.reduce((acc, product) => acc + product.price * product.quantity, 0)) * 0.15) + (products.reduce((acc, product) => acc + product.price * product.quantity, 0)) + 53.00).toFixed(2)}</span>
                 </div>
               </div>
               <div className="flex gap-2 ">
@@ -200,7 +182,7 @@ export default function Checkout() {
                 <button className="mt-4 w-[80px] p-2 border border-[#141311] rounded-[4px]">Apply</button>
               </div>
 
-              <button className="mt-4 w-full p-2 bg-[#141311] text-white rounded">Pay $800.00</button>
+              <button className="mt-4 w-full p-2 bg-[#141311] text-white rounded">Pay ${(products.reduce((acc, product) => acc + product.price * product.quantity, 0)).toFixed(2)}</button>
               <p className="mt-4 text-sm text-center hidden lg:block">
                 By proceeding, you are automatically accepting the <a href="#" className="text-[#032FA7]">Terms & Conditions</a>
               </p>
@@ -211,4 +193,6 @@ export default function Checkout() {
       <Footer />
     </div>
   );
-}
+};
+
+export default CheckoutPage;
